@@ -2,6 +2,8 @@
 
 Save CLI code agent conversations and align them with git commits in a single `codey.html` file.
 
+![demo](https://codey.elsetech.app/demo.png)
+
 ## Install
 
 ```bash

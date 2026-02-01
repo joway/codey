@@ -422,7 +422,10 @@ def git_available():
 
 def get_git_head():
     try:
-        out = subprocess.check_output(["git", "rev-parse", "--verify", "HEAD"]).decode("utf-8").strip()
+        out = subprocess.check_output(
+            ["git", "rev-parse", "--verify", "HEAD"],
+            stderr=subprocess.DEVNULL,
+        ).decode("utf-8").strip()
         return out
     except Exception:
         return None
@@ -438,7 +441,7 @@ def get_git_commits(last_commit):
     if last_commit:
         cmd.insert(2, f"{last_commit}..HEAD")
     try:
-        out = subprocess.check_output(cmd).decode("utf-8")
+        out = subprocess.check_output(cmd, stderr=subprocess.DEVNULL).decode("utf-8")
     except Exception:
         return []
     commits = []
