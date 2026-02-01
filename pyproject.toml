@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "codey-cli"
+version = "0.1.1"
+description = "Save code agent conversations aligned with git commits."
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+authors = [{name = "Joway"}]
+dependencies = []
+
+[project.scripts]
+codey = "codey_cli:main"
+
+[tool.setuptools]
+packages = ["codey_cli"]

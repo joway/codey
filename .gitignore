@@ -1,0 +1,4 @@
+.venv/
+codey_cli.egg-info
+demo/
+dist/
